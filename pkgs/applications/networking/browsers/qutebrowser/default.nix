@@ -1,5 +1,5 @@
 { stdenv, lib, fetchurl, fetchzip, python3Packages
-, makeWrapper, wrapGAppsHook, qtbase, glib-networking
+, makeWrapper, wrapGAppsHook, wrapQtAppsHook, qtbase, glib-networking
 , asciidoc, docbook_xml_dtd_45, docbook_xsl, libxml2
 , libxslt, gst_all_1 ? null
 , withPdfReader        ? true
@@ -41,7 +41,7 @@ in python3Packages.buildPythonApplication rec {
   ]);
 
   nativeBuildInputs = [
-    makeWrapper wrapGAppsHook asciidoc
+    makeWrapper wrapGAppsHook wrapQtAppsHook asciidoc
     docbook_xml_dtd_45 docbook_xsl libxml2 libxslt
   ];
 
