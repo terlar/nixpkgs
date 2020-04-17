@@ -36791,6 +36791,8 @@ with pkgs;
 
   cnijfilter2 = callPackage ../misc/cups/drivers/cnijfilter2 { };
 
+  cnijfilter-common = callPackage ../misc/cups/drivers/cnijfilter-common {};
+
   depotdownloader = callPackage ../tools/misc/depotdownloader { };
 
   dbacl = callPackage ../tools/misc/dbacl { };
